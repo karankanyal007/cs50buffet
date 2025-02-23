@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert Menu - CS50 Buffet</title>
+</head>
+<body style="background-image: url('images/background_images/dessert.jpg');">
+    <div class="navbar">
+        <div class="navbar-title">
+            <a href="index.html">CS50 BUFFET</a>
+        </div>
+        <button class="navbar-toggler" aria-label="Toggle navigation">
+            <span class="hamburger-icon">☰</span>
+        </button>
+        <div class="navbar-links">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Menu <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="veg.html">Vegetarian</a>
+                    <a href="nonveg.html">Non-Vegetarian</a>
+                    <a href="dessert.html">Dessert</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="content dessert">
+        <h1>Dessert Menu</h1>
+        <div class="menu-list">
+            <div class="menu-item">
+                <img src="images/dessert_images/perl_panna_cotta.jpg" alt="Perl Panna Cotta" loading="lazy">
+                <div>
+                    <h3>Perl Panna Cotta</h3>
+                    <p>A silky vanilla panna cotta with a berry coulis—classic yet versatile.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/dessert_images/kotlin_key_lime_pie.jpg" alt="Kotlin Key Lime Pie" loading="lazy">
+                <div>
+                    <h3>Kotlin Key Lime Pie</h3>
+                    <p>Tangy lime custard in a graham crust, topped with whipped cream—zesty and modern.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/dessert_images/elixir_eton_mess.jpg" alt="Elixir Eton Mess" loading="lazy">
+                <div>
+                    <h3>Elixir Eton Mess</h3>
+                    <p>A chaotic blend of meringue, strawberries, and cream—sweet and dynamic.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/dessert_images/scala_sorbet.jpg" alt="Scala Sorbet" loading="lazy">
+                <div>
+                    <h3>Scala Sorbet</h3>
+                    <p>A refreshing mango sorbet—smooth, functional, and delightful.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

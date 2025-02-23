@@ -1,0 +1,395 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('images/background_images/buffet.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2a2a2a;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-title a {
+    color: #ff9999;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.navbar-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    background: rgba(255, 153, 153, 0.2);
+    color: #ff9999;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    background: rgba(255, 153, 153, 0.2);
+    color: #ff9999;
+}
+
+.dropdown-arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333333;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 10px 15px;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: rgba(255, 153, 153, 0.3);
+    color: #ff9999;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.1);
+    color: #ff9999;
+}
+
+/* Content Styles */
+.content {
+    max-width: 800px;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    margin-top: 80px;
+}
+
+h1 {
+    font-size: 6vw;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Index Page Specific */
+.menu-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.menu-buttons-Vegetarian, .menu-buttons-Non-Vegetarian, .menu-buttons-Dessert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-buttons-Vegetarian a, .menu-buttons-Non-Vegetarian a, .menu-buttons-Dessert a {
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.menu-buttons-Vegetarian a {
+    background: rgb(21, 133, 34);
+}
+
+.menu-buttons-Vegetarian a:hover {
+    background: rgb(50, 160, 60);
+    transform: scale(1.05);
+}
+
+.menu-buttons-Non-Vegetarian a {
+    background: rgb(64, 28, 9);
+}
+
+.menu-buttons-Non-Vegetarian a:hover {
+    background: rgb(100, 50, 20);
+    transform: scale(1.05);
+}
+
+.menu-buttons-Dessert a {
+    background: #6D0530;
+}
+
+.menu-buttons-Dessert a:hover {
+    background: rgb(150, 50, 80);
+    transform: scale(1.05);
+}
+
+/* Menu List Styles (veg, nonveg, dessert) */
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-item {
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.02);
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.menu-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-item p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Vegetarian Specific */
+.veg .menu-item {
+    background: rgb(107, 166, 56);
+}
+
+.veg .menu-item:hover {
+    background: rgb(50, 160, 60);
+}
+
+/* Non-Vegetarian Specific */
+.nonveg .menu-item {
+    background: rgb(148, 99, 64);
+}
+
+.nonveg .menu-item:hover {
+    background: rgb(100, 50, 20);
+}
+
+/* Dessert Specific */
+.dessert .menu-item {
+    background: #d9739d;
+}
+
+.dessert .menu-item:hover {
+    background: rgb(150, 50, 80);
+}
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #ff1744;
+    transform: scale(1.05);
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px 20px;
+        background: #2a2a2a;
+        flex-wrap: wrap;
+    }
+
+    .navbar-title {
+        flex: 1;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #333333;
+        padding: 15px 20px;
+        margin-top: 10px;
+        border-radius: 0 0 10px 10px;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        max-height: 400px;
+        opacity: 1;
+    }
+
+    .navbar-links a {
+        margin: 10px 0;
+        font-size: 18px;
+        width: 100%;
+        padding: 12px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-toggle::after {
+        content: none;
+    }
+
+    .dropdown-toggle .dropdown-arrow {
+        font-size: 14px;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        background: #404040;
+        box-shadow: none;
+        padding-left: 15px;
+        border-radius: 0;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+        max-height: 200px;
+    }
+
+    .dropdown-content a {
+        padding: 10px 15px;
+        border-bottom: none;
+    }
+
+    .menu-buttons-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-buttons-Vegetarian a, .menu-buttons-Non-Vegetarian a, .menu-buttons-Dessert a {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-item img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
